@@ -12,7 +12,6 @@
 		p {
 			color: white;
 			font-size: x-large;
-
 		}
 
 		body {
@@ -66,7 +65,7 @@
 		}
 
 		/* Status display
-		 * ============== */
+			 * ============== */
 
 		#status {
 			position: absolute;
@@ -169,7 +168,6 @@
 
 <body>
 	<h1> A Food Safety Detective Game supported by better.sg</h1>
-
 	<canvas id='canvas'>
 		HTML5 canvas appears to be unsupported in the current browser.<br />
 		Please try updating or use a different browser.
@@ -191,7 +189,6 @@
 			<p>5) Enjoy and have fun.
 		</div>
 	</div>
-
 	<div id='status'>
 		<div id='status-progress' style='display: none;' oncontextmenu='event.preventDefault();'>
 			<div id='status-progress-inner'></div>
@@ -209,7 +206,7 @@
 		<div id='status-notice' class='godot' style='display: none;'></div>
 	</div>
 
-	<script type='text/javascript' src='Food_safety_game.js'></script>
+	<script type='text/javascript' src='Food_safety_game_mobile.js'></script>
 	<script type='text/javascript'>//<![CDATA[
 
 		var engine = new Engine;
@@ -218,8 +215,8 @@
 
 		(function () {
 
-			const EXECUTABLE_NAME = 'Food_safety_game';
-			const MAIN_PACK = 'Food_safety_game.pck';
+			const EXECUTABLE_NAME = 'Food_safety_game_mobile';
+			const MAIN_PACK = 'Food_safety_game_mobile.pck';
 			const INDETERMINATE_STATUS_STEP_MS = 100;
 
 			var canvas = document.getElementById('canvas');
@@ -240,8 +237,8 @@
 
 			function adjustCanvasDimensions() {
 				var scale = window.devicePixelRatio || 1;
-				var width = window.innerWidth * 0.85;
-				var height = window.innerHeight * 0.85;
+				var width = window.innerWidth;
+				var height = window.innerHeight;
 				canvas.width = width * scale;
 				canvas.height = height * scale;
 				canvas.style.width = width + "px";
@@ -338,9 +335,6 @@
 			}
 		})();
 	//]]></script>
-	<footer>
-		&copy; 2021 Ong Hong Rui
-	</footer>
 </body>
 
 </html>
